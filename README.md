@@ -1,4 +1,3 @@
----
 # 📋 STICKIT - Documentação do Projeto
 
 > _"Grude no que importa."_  
