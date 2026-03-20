@@ -3,6 +3,10 @@
 > _"Grude no que importa."_  
 > Versão 1.0 - MVP
 
+![Version](https://img.shields.io/badge/version-1.0--MVP-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Stack](https://img.shields.io/badge/stack-Angular%20%7C%20NestJS-red)
+
 ## 🎯 Sobre o Projeto
 
 **StickIt** é um assistente pessoal de produtividade que transforma a gestão de metas em uma experiência visual e intuitiva. Inspirado em post-its, o app permite que você organize seus hábitos de forma natural: arrastando, configurando e grudando metas no seu quadro pessoal.
@@ -133,7 +137,7 @@ Cores pastel personalizáveis, tipografia manuscrita + Inter, animações físic
 
 ```bash
 # Clone
-git clone https://github.com/seu-usuario/stickit.git
+git clone https://github.com/Belluominus/stickit
 cd stickit
 
 # Backend
