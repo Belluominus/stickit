@@ -1,40 +1,40 @@
-# 🛠️Stack Tecnológica
+# 🛠️ Tech Stack
 
 ### Frontend: Angular
 
 ```text
 ├── Framework: Angular 17+
-├── Linguagem: TypeScript
-├── Estilização: TailwindCSS (para agilidade)
-├── Drag & Drop: CDK Drag and Drop (nativo do Angular)
-├── Animações: Angular Animations + RxJS
-├── Gerenciamento de estado: Services + Signals (Angular 17+)
-└── Ícones: Lucide Icons (leves e customizáveis)
+├── Language: TypeScript
+├── Styling: TailwindCSS (for speed)
+├── Drag & Drop: CDK Drag and Drop (native to Angular)
+├── Animations: Angular Animations + RxJS
+├── State management: Services + Signals (Angular 17+)
+└── Icons: Lucide Icons (lightweight and customizable)
 ```
 
-**Por que Angular + CDK:**
+**Why Angular + CDK:**
 
-- Drag and drop nativo e performático
-- Animações declarativas
-- Signals para reatividade simples
+- Native and performant drag and drop
+- Declarative animations
+- Signals for simple reactivity
 - TypeScript end-to-end
 
 ### Backend: Node.js + NestJS
 
 ```text
 ├── Framework: NestJS
-├── Linguagem: TypeScript
-├── Autenticação: JWT
-├── Validação: class-validator
-├── Documentação: Swagger
-└── Arquitetura: Modular (Metas, Execução, Insights)
+├── Language: TypeScript
+├── Authentication: JWT
+├── Validation: class-validator
+├── Documentation: Swagger
+└── Architecture: Modular (Goals, Execution, Insights)
 ```
-### Banco de Dados: PostgreSQL + Prisma
+### Database: PostgreSQL + Prisma
 
 ```text
 ├── ORM: Prisma (schema-first)
 ├── Migrations: Prisma Migrate
-├── Visualização: Prisma Studio (dev)
-└── Banco: PostgreSQL 15+
+├── Visualization: Prisma Studio (dev)
+└── Database: PostgreSQL 15+
 ```
-<!-- IMAGEM: Diagrama da arquitetura completa -->
+<!-- IMAGE: Complete architecture diagram -->

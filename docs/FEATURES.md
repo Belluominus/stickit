@@ -1,70 +1,70 @@
-# ⚡Funcionalidades
+# ⚡ Features
 
-### 1. **Quadro Interativo**
+### 1. **Interactive Board**
 
-| Funcionalidade            | Descrição                                  |
-| ------------------------- | ------------------------------------------ |
-| **Drag & Drop nativo**    | Arraste post-its entre ilha e quadro       |
-| **Posições persistentes** | O app lembra onde você deixou cada post-it |
-| **Zoom contextual**       | Clique duplo para ver detalhes da meta     |
-| **Filtro visual**         | Mostrar/ocultar post-its por categoria     |
+| Feature                     | Description                                    |
+| --------------------------- | ---------------------------------------------- |
+| **Native Drag & Drop**      | Drag post-its between island and board         |
+| **Persistent positions**    | The app remembers where you left each post-it  |
+| **Contextual zoom**         | Double-click to see goal details               |
+| **Visual filter**           | Show/hide post-its by category                 |
 
-<!-- IMAGEM: Demonstração das posições dos post-its no quadro --><!-- GIF: Interação de drag and drop funcionando -->
+<!-- IMAGE: Demonstration of post-it positions on the board --><!-- GIF: Drag and drop interaction working -->
 
-### 2. **Tipos de Post-it (Técnicas de Execução)**
+### 2. **Post-it Types (Execution Techniques)**
 
-Cada post-it pode ser configurado com uma técnica diferente:
+Each post-it can be configured with a different technique:
 
-|Tipo|Ícone|Para que serve|Comportamento|
+|Type|Icon|What it's for|Behavior|
 |---|---|---|---|
-|**Pomodoro**|🍅|Estudo, trabalho focado|Timer com ciclos|
-|**Tempo Livre**|⏱️|Academia, caminhada|Cronômetro simples|
-|**Check-in**|✅|Alimentação, medicação|Botão "Concluído"|
+|**Pomodoro**|🍅|Study, focused work|Timer with cycles|
+|**Free Time**|⏱️|Workout, walking|Simple stopwatch|
+|**Check-in**|✅|Meals, medication|"Completed" button|
 
-<!-- IMAGEM: Os três tipos de post-it lado a lado com seus ícones --><!-- GIF: Cada tipo sendo utilizado -->
+<!-- IMAGE: The three types of post-its side by side with their icons --><!-- GIF: Each type being used -->
 
-### 3. **Configuração do Post-it**
+### 3. **Post-it Configuration**
 
-Ao arrastar um post-it para o quadro, o modal de configuração aparece:
+When dragging a post-it to the board, the configuration modal appears:
 
-<!-- IMAGEM: Modal de configuração aberto --><!-- GIF: Preenchendo e salvando uma configuração -->
+<!-- IMAGE: Configuration modal open --><!-- GIF: Filling out and saving a configuration -->
 
-### 4. **Execução e Check-in**
+### 4. **Execution and Check-in**
 
-|Momento|Ação|Registro|
+|Moment|Action|Recording|
 |---|---|---|
-|**Iniciar**|Click no post-it|Salva horário real de início|
-|**Executar**|Timer/Pomodoro rodando|Interface adaptada ao tipo|
-|**Concluir**|Click em "Concluir"|Salva horário de fim|
-|**Check-in**|Modal rápido aparece|Pergunta: "Conseguiu concluir?" + observação|
+|**Start**|Click on post-it|Saves actual start time|
+|**Execute**|Timer/Pomodoro running|Interface adapted to type|
+|**Complete**|Click "Complete"|Saves end time|
+|**Check-in**|Quick modal appears|Asks: "Did you manage to complete it?" + notes|
 
-<!-- GIF: Ciclo completo de execução com check-in -->
+<!-- GIF: Complete execution cycle with check-in -->
 
-### 5. **Feedbacks Visuais (Easter Eggs)**
+### 5. **Visual Feedback (Easter Eggs)**
 
-| Situação                 | Efeito Visual                                    |
-| ------------------------ | ------------------------------------------------ |
-| **Meta não cumprida**    | Post-it começa a "descolar" (cantinho levantado) |
-| **Sequência de sucesso** | Post-it fica mais "grudado" (sombra mais forte)  |
-| **Arrastar sobre outro** | Cria uma "pilha" de hábitos relacionados         |
-| **Concluir tarefa**      | Post-it "amassa" levemente e desaparece          |
+| Situation                 | Visual Effect                                        |
+| ------------------------- | ---------------------------------------------------- |
+| **Goal not met**          | Post-it starts to "peel off" (corner lifted)         |
+| **Success streak**        | Post-it becomes more "stuck" (stronger shadow)       |
+| **Dragging over another** | Creates a "stack" of related habits                  |
+| **Completing task**       | Post-it slightly "crinkles" and disappears           |
 
-<!-- GIF: Cada feedback visual em ação -->
+<!-- GIF: Each visual feedback in action -->
 
 ---
 
-# 📊 Coleta de Dados
+# 📊 Data Collection
 
-Na versão 1.0, vamos coletar tudo para na versão 2.0 implementar inteligência:
+In version 1.0, we will collect everything to implement intelligence in version 2.0:
 
-|Dado|Onde|Uso futuro|
+|Data|Where|Future use|
 |---|---|---|
-|Horário planejado|Configuração|Saber sua intenção|
-|Horário real início|Execução|Calcular desvio|
-|Horário real fim|Execução|Calcular duração|
-|Check-in "concluiu?"|Pós-execução|Taxa de sucesso|
-|Observações|Pós-execução|Análise qualitativa|
-|Dados da técnica|Durante execução|Ex: pomodoros feitos|
-|Posição do post-it|Quadro|Preferências visuais|
+|Planned time|Configuration|Know your intention|
+|Actual start time|Execution|Calculate deviation|
+|Actual end time|Execution|Calculate duration|
+|Check-in "completed?"|Post-execution|Success rate|
+|Notes|Post-execution|Qualitative analysis|
+|Technique data|During execution|E.g., pomodoros completed|
+|Post-it position|Board|Visual preferences|
 
-<!-- IMAGEM: Exemplo de como esses dados serão apresentados em gráficos futuros -->
+<!-- IMAGE: Example of how this data will be presented in future charts -->

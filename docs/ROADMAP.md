@@ -1,45 +1,45 @@
-# 🗓️Roadmap
+# 🗓️ Roadmap
 
-### Fase 1: Fundação (Semanas 1-2)
+### Phase 1: Foundation (Weeks 1-2)
 
-- Setup Angular + Tailwind
-- Setup NestJS + Prisma
-- Modelagem do banco
-- Autenticação JWT
+- Angular + Tailwind setup
+- NestJS + Prisma setup
+- Database modeling
+- JWT authentication
 
-### Fase 2: Quadro e Post-its (Semanas 3-4)
+### Phase 2: Board and Post-its (Weeks 3-4)
 
-- Componente Post-it (base)
-- Layout do quadro com CDK Drag & Drop
-- Ilha de ideias
-- Persistência de posições
+- Post-it component (base)
+- Board layout with CDK Drag & Drop
+- Idea island
+- Position persistence
 
-### Fase 3: Configuração e Tipos (Semanas 5-6)
+### Phase 3: Configuration and Types (Weeks 5-6)
 
-- Modal de configuração dinâmico
-- Implementação dos 3 tipos de execução
-- CRUD completo de metas
+- Dynamic configuration modal
+- Implementation of the 3 execution types
+- Complete CRUD for goals
 
-### Fase 4: Execução e Check-in (Semanas 7-8)
+### Phase 4: Execution and Check-in (Weeks 7-8)
 
-- Timers (Pomodoro e Tempo Livre)
-- Check-in pós-execução
-- Registro de sessões
-- Feedbacks visuais
+- Timers (Pomodoro and Free Time)
+- Post-execution check-in
+- Session recording
+- Visual feedback
 
-### Fase 5: Polimento (Semanas 9-10)
+### Phase 5: Polishing (Weeks 9-10)
 
-- Easter eggs visuais
-- Testes e ajustes
-- Deploy
-- Documentação final
+- Visual easter eggs
+- Testing and adjustments
+- Deployment
+- Final documentation
 
-### Fase 6: Futuro (Versão 2.0)
+### Phase 6: Future (Version 2.0)
 
-- Módulo de insights
-- Gráficos de produtividade
-- Compartilhar quadros    
-- Templates de post-it
-- App mobile
+- Insights module
+- Productivity charts
+- Share boards
+- Post-it templates
+- Mobile app
 
-<!-- IMAGEM: Timeline visual do roadmap -->
+<!-- IMAGE: Visual timeline of the roadmap -->

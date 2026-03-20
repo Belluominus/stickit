@@ -1,228 +1,228 @@
-# 🎨Design System
+# 🎨 Design System
 
-> _Cores pastel que você escolhe, personalidade que você define._
+> _Pastel colors you choose, personality you define._
 
-<!-- IMAGEM: Paleta de cores pastel em círculos --><!-- GIF: Usuário alterando as cores e vendo os post-its mudarem em tempo real -->
+<!-- IMAGE: Pastel color palette in circles --><!-- GIF: User changing colors and seeing post-its change in real time -->
 
-### Filosofia
+### Philosophy
 
-O StickIt oferece **liberdade com curadoria**. O usuário não precisa pensar em teoria das cores, mas pode expressar sua personalidade através delas.
+StickIt offers **curated freedom**. The user doesn't need to think about color theory, but can express their personality through it.
 
-**Como funciona:**
+**How it works:**
 
-- 12 cores pastel base (curadoria profissional)
-- Usuário escolhe **até 5 cores** para sua paleta pessoal
-- Post-its alternam entre as cores escolhidas
-- Pode mudar quando quiser
-
----
-
-### 🎨 Paleta Base (Curadoria)
-
-Todas as cores são **pastel** (baixa saturação, alto brilho) para manter a estética suave e agradável.
-
-| Nome              | Hex       | RGB              | Vibração                   |
-| ----------------- | --------- | ---------------- | -------------------------- |
-| **Azul Nuvem**    | `#55CDFC` | rgb(85,205,252)  | Calma, clareza             |
-| **Rosa Algodão**  | `#F7A8B8` | rgb(247,168,184) | Doçura, carinho            |
-| **Menta Fresca**  | `#A8E6CF` | rgb(168,230,207) | Renovação, equilíbrio      |
-| **Lavanda Suave** | `#D4B8E0` | rgb(212,184,224) | Criatividade, intuição     |
-| **Pêssego**       | `#FFD5B5` | rgb(255,213,181) | Aconchego, energia         |
-| **Limão**         | `#FFF4A8` | rgb(255,244,168) | Otimismo, foco             |
-| **Sálvia**        | `#C0E0C0` | rgb(192,224,192) | Harmonia, crescimento      |
-| **Céu Noturno**   | `#B8D0E0` | rgb(184,208,224) | Serenidade, confiança      |
-| **Orquídea**      | `#E0C0E0` | rgb(224,192,224) | Sonho, inspiração          |
-| **Areia**         | `#F5E6D3` | rgb(245,230,211) | Estabilidade, simplicidade |
-| **Água**          | `#B0E0E6` | rgb(176,224,230) | Fluidez, movimento         |
-| **Névoa**         | `#E0E0E0` | rgb(224,224,224) | Neutralidade, equilíbrio   |
-
-<!-- IMAGEM: Amostras das 12 cores em cards --><!-- IMAGEM: Combinações harmoniosas sugeridas -->
+- 12 base pastel colors (professional curation)
+- User chooses **up to 5 colors** for their personal palette
+- Post-its alternate between the chosen colors
+- Can change whenever you want
 
 ---
 
-### 🎚️ Sistema de Personalização
+### 🎨 Base Palette (Curated)
 
-#### Tela de Configuração de Cores:
+All colors are **pastel** (low saturation, high brightness) to maintain a soft, pleasant aesthetic.
 
-<!-- IMAGEM: Interface de seleção de cores --><!-- GIF: Arrastando cores para a paleta pessoal -->
+| Name               | Hex       | RGB              | Vibe                       |
+| ------------------ | --------- | ---------------- | -------------------------- |
+| **Cloud Blue**     | `#55CDFC` | rgb(85,205,252)  | Calm, clarity              |
+| **Cotton Candy Pink** | `#F7A8B8` | rgb(247,168,184) | Sweetness, affection       |
+| **Fresh Mint**     | `#A8E6CF` | rgb(168,230,207) | Renewal, balance           |
+| **Soft Lavender**  | `#D4B8E0` | rgb(212,184,224) | Creativity, intuition      |
+| **Peach**          | `#FFD5B5` | rgb(255,213,181) | Coziness, energy           |
+| **Lemon**          | `#FFF4A8` | rgb(255,244,168) | Optimism, focus            |
+| **Sage**           | `#C0E0C0` | rgb(192,224,192) | Harmony, growth            |
+| **Night Sky**      | `#B8D0E0` | rgb(184,208,224) | Serenity, trust            |
+| **Orchid**         | `#E0C0E0` | rgb(224,192,224) | Dream, inspiration         |
+| **Sand**           | `#F5E6D3` | rgb(245,230,211) | Stability, simplicity      |
+| **Water**          | `#B0E0E6` | rgb(176,224,230) | Fluidity, movement         |
+| **Mist**           | `#E0E0E0` | rgb(224,224,224) | Neutrality, balance        |
 
-#### Lógica de Distribuição:
+<!-- IMAGE: Swatches of the 12 colors in cards --><!-- IMAGE: Suggested harmonious combinations -->
+
+---
+
+### 🎚️ Customization System
+
+#### Color Configuration Screen:
+
+<!-- IMAGE: Color selection interface --><!-- GIF: Dragging colors to personal palette -->
+
+#### Distribution Logic:
 
 ```typescript
-interface PaletaUsuario {
-  coresEscolhidas: string[]; // Array com até 5 hex codes
-  modoDistribuicao: 'alternado' | 'categoria' | 'aleatorio';
+interface UserPalette {
+  chosenColors: string[]; // Array with up to 5 hex codes
+  distributionMode: 'alternating' | 'category' | 'random';
 }
-// Modos de distribuição:
-// 1. Alternado: Post-its alternam entre as cores escolhidas
-// 2. Por categoria: Cada categoria tem uma cor fixa (ex: estudos sempre azul)
-// 3. Aleatório: Surpresa a cada novo post-it
+// Distribution modes:
+// 1. Alternating: Post-its alternate between chosen colors
+// 2. By category: Each category has a fixed color (e.g., study always blue)
+// 3. Random: Surprise with each new post-it
 
-<!-- GIF: Alternando entre os modos de distribuição -->
+<!-- GIF: Toggling between distribution modes -->
 ```
 ---
 
-### 📝 Tipografia
+### 📝 Typography
 
-|Elemento|Fonte|Peso|Uso|
+|Element|Font|Weight|Usage|
 |---|---|---|---|
-|**Post-it (título)**|Caveat / Permanent Marker|400|Texto manuscrito no post-it|
-|**Post-it (detalhes)**|Inter|300|Horários, contadores|
-|**Interface (geral)**|Inter|400/600|Botões, menus, modais|
-|**Destaques**|Inter|700|Números, progresso|
+|**Post-it (title)**|Caveat / Permanent Marker|400|Handwritten text on post-it|
+|**Post-it (details)**|Inter|300|Times, counters|
+|**Interface (general)**|Inter|400/600|Buttons, menus, modals|
+|**Highlights**|Inter|700|Numbers, progress|
 
-**Justificativa:**
+**Rationale:**
 
-- Fonte manuscrita nos post-its reforça a metáfora visual
-- Inter garante legibilidade para informações importantes
-- Contraste entre manuscrito e limpo cria hierarquia visual
+- Handwritten font on post-its reinforces the visual metaphor
+- Inter ensures readability for important information
+- Contrast between handwritten and clean creates visual hierarchy
 
-<!-- IMAGEM: Exemplo de post-it com as duas fontes --><!-- IMAGEM: Comparação de legibilidade -->
+<!-- IMAGE: Example of post-it with both fonts --><!-- IMAGE: Legibility comparison -->
 
 ---
 
-### 🖼️ Ícones
+### 🖼️ Icons
 
-|Ícone|Uso|Biblioteca|
+|Icon|Usage|Library|
 |---|---|---|
-|🍅|Pomodoro|Emoji nativo|
-|⏱️|Tempo Livre|Emoji nativo|
-|✅|Check-in|Emoji nativo|
-|💪|Academia|Emoji nativo|
-|📚|Estudo|Emoji nativo|
-|🥗|Alimentação|Emoji nativo|
-|🧹|Casa|Emoji nativo|
+|🍅|Pomodoro|Native emoji|
+|⏱️|Free Time|Native emoji|
+|✅|Check-in|Native emoji|
+|💪|Workout|Native emoji|
+|📚|Study|Native emoji|
+|🥗|Food|Native emoji|
+|🧹|House|Native emoji|
 
-**Decisão:** Usar emojis nativos do sistema para:
+**Decision:** Use native system emojis for:
 
-- Leveza (sem bibliotecas pesadas)
-- Familiaridade (todo mundo conhece)
-- Suporte universal
+- Lightweight (no heavy libraries)
+- Familiarity (everyone knows them)
+- Universal support
 
-<!-- IMAGEM: Grid de ícones/emojis disponíveis -->
+<!-- IMAGE: Grid of available icons/emojis -->
 
 ---
 
-### 🎬 Animações
+### 🎬 Animations
 
-|Elemento|Animação|Duração|Easing|
+|Element|Animation|Duration|Easing|
 |---|---|---|---|
-|**Arrastar post-it**|Sombra + escala|100ms|ease-out|
-|**Sol tar no quadro**|"Thud" (leve salto)|200ms|cubic-bezier(0.34, 1.56, 0.64, 1)|
-|**Configurar**|Flip horizontal|300ms|ease-in-out|
-|**Concluir tarefa**|Amassar + fade out|400ms|ease-in|
-|**Post-it descolando**|Inclinação + sombra|Contínua|linear|
-|**Mudar paleta**|Transição de cores|500ms|ease-in-out|
+|**Dragging post-it**|Shadow + scale|100ms|ease-out|
+|**Dropping on board**|"Thud" (light bounce)|200ms|cubic-bezier(0.34, 1.56, 0.64, 1)|
+|**Configuring**|Horizontal flip|300ms|ease-in-out|
+|**Completing task**|Crinkle + fade out|400ms|ease-in|
+|**Post-it peeling off**|Tilt + shadow|Continuous|linear|
+|**Changing palette**|Color transition|500ms|ease-in-out|
 
-<!-- GIF: Cada animação em ação --><!-- GIF: Comparação com/sem animações -->
+<!-- GIF: Each animation in action --><!-- GIF: Comparison with/without animations -->
 
 ---
 
-### 📐 Espaçamento e Dimensões
+### 📐 Spacing and Dimensions
 
-|Elemento|Tamanho (Desktop)|Tamanho (Mobile)|
+|Element|Size (Desktop)|Size (Mobile)|
 |---|---|---|
 |**Post-it**|180x180px|140x140px|
-|**Ilha de Ideias**|220px largura|Gaveta inferior|
-|**Quadro Principal**|Flexível|Flexível|
-|**Fonte post-it**|18px|16px|
-|**Ícone post-it**|32px|28px|
-|**Sombra padrão**|4px 4px 10px rgba(0,0,0,0.1)|2px 2px 8px rgba(0,0,0,0.1)|
+|**Idea Island**|220px width|Bottom drawer|
+|**Main Board**|Flexible|Flexible|
+|**Post-it font**|18px|16px|
+|**Post-it icon**|32px|28px|
+|**Default shadow**|4px 4px 10px rgba(0,0,0,0.1)|2px 2px 8px rgba(0,0,0,0.1)|
 
-<!-- IMAGEM: Guia de medidas e proporções -->
+<!-- IMAGE: Measurement and proportion guide -->
 
 ---
 
-### 🌓 Modo Claro / Escuro
+### 🌓 Light / Dark Mode
 
-O StickIt se adapta automaticamente ao tema do sistema, mas com uma abordagem única:
+StickIt automatically adapts to the system theme, but with a unique approach:
 
-|Elemento|Claro|Escuro|
+|Element|Light|Dark|
 |---|---|---|
-|**Post-its**|Cores pastel originais|Cores pastel com +20% brilho|
-|**Quadro**|Fundo cinza claro (#F0F0F0)|Fundo cinza escuro (#2C2C2C)|
-|**Texto post-it**|Preto (#2C2C2C)|Quase branco (#F0F0F0)|
-|**Sombras**|Preta suave|Branca suave (glow)|
-|**Ilha de Ideias**|Fundo branco|Fundo #3C3C3C|
+|**Post-its**|Original pastel colors|Pastel colors with +20% brightness|
+|**Board**|Light gray background (#F0F0F0)|Dark gray background (#2C2C2C)|
+|**Post-it text**|Black (#2C2C2C)|Near white (#F0F0F0)|
+|**Shadows**|Soft black|Soft white (glow)|
+|**Idea Island**|White background|Background #3C3C3C|
 
-<!-- IMAGEM: Side-by-side modo claro vs escuro --><!-- GIF: Alternando entre modos -->
+<!-- IMAGE: Side-by-side light vs dark mode --><!-- GIF: Toggling between modes -->
 
 ---
 
-### 🧩 Componentes Core (com cores)
+### 🧩 Core Components (with colors)
 
-#### Post-It Base
+#### Base Post-It
 
 ```html
 <div class="post-it" 
-     [style.background-color]="cor"
-     [style.transform]="estaDescolando ? 'rotate(-2deg)' : 'none'"
-     [style.box-shadow]="modoEscuro ? '0 0 15px rgba(255,255,255,0.2)' : '4px 4px 10px rgba(0,0,0,0.1)'">
+     [style.background-color]="color"
+     [style.transform]="isPeelingOff ? 'rotate(-2deg)' : 'none'"
+     [style.box-shadow]="darkMode ? '0 0 15px rgba(255,255,255,0.2)' : '4px 4px 10px rgba(0,0,0,0.1)'">
   
-  <div class="post-it-icone">{{ icone }}</div>
-  <div class="post-it-titulo fonte-manuscrita">{{ titulo }}</div>
-  <div class="post-it-detalhes fonte-inter">{{ detalhes }}</div>
+  <div class="post-it-icon">{{ icon }}</div>
+  <div class="post-it-title handwritten-font">{{ title }}</div>
+  <div class="post-it-details inter-font">{{ details }}</div>
   
-  <div class="post-it-cantinho" *ngIf="estaDescolando"></div>
+  <div class="post-it-corner" *ngIf="isPeelingOff"></div>
 </div>
 ```
-<!-- IMAGEM: Componente post-it com anotações das partes -->
+<!-- IMAGE: Post-it component with annotations of parts -->
 
 ---
 
-### 🎮 Exemplos de Paletas Sugeridas
+### 🎮 Suggested Palette Examples
 
-Para ajudar usuários indecisos, oferecemos combinações prontas:
+To help indecisive users, we offer ready-made combinations:
 
-|Paleta|Cores|Mood|
+|Palette|Colors|Mood|
 |---|---|---|
-|**Praia**|#55CDFC + #A8E6CF + #F5E6D3|Calma, refrescante|
-|**Pôr do Sol**|#FFD5B5 + #F7A8B8 + #D4B8E0|Aconchegante, criativo|
-|**Natura**|#C0E0C0 + #A8E6CF + #F5E6D3|Equilíbrio, crescimento|
-|**Foco**|#55CDFC + #B8D0E0 + #E0E0E0|Produtividade, clareza|
-|**Sonho**|#D4B8E0 + #E0C0E0 + #F7A8B8|Imaginação, leveza|
+|**Beach**|#55CDFC + #A8E6CF + #F5E6D3|Calm, refreshing|
+|**Sunset**|#FFD5B5 + #F7A8B8 + #D4B8E0|Cozy, creative|
+|**Nature**|#C0E0C0 + #A8E6CF + #F5E6D3|Balance, growth|
+|**Focus**|#55CDFC + #B8D0E0 + #E0E0E0|Productivity, clarity|
+|**Dream**|#D4B8E0 + #E0C0E0 + #F7A8B8|Imagination, lightness|
 
-<!-- IMAGEM: As 5 paletas sugeridas em cards --><!-- GIF: Aplicando cada paleta no quadro -->
+<!-- IMAGE: The 5 suggested palettes in cards --><!-- GIF: Applying each palette to the board -->
 
 ---
 
-### 📱 Responsividade das Cores
+### 📱 Color Responsiveness
 
-No mobile, a seleção de cores muda para gestos:
+On mobile, color selection changes to gestures:
 
 ```typescript
-// Mobile: Swipe para trocar cor do post-it
+// Mobile: Swipe to change post-it color
 @HostListener('swipeleft') onSwipeLeft() {
-  this.mudarCorProxima();
+  this.changeToNextColor();
 }
 @HostListener('swiperight') onSwipeRight() {
-  this.mudarCorAnterior();
+  this.changeToPreviousColor();
 }
 ```
-<!-- GIF: Trocando cores com swipe no celular -->
+<!-- GIF: Changing colors with swipe on mobile -->
 
 ---
 
-## 📋 Resumo do Design System
+## 📋 Design System Summary
 
-|Categoria|Especificação|
+|Category|Specification|
 |---|---|
-|**Cores base**|12 tons pastel curados|
-|**Paleta pessoal**|Até 5 cores escolhidas pelo usuário|
-|**Tipografia**|Caveat (manuscrita) + Inter (limpa)|
-|**Ícones**|Emojis nativos|
-|**Animações**|Físicas, divertidas, 200-500ms|
-|**Modo escuro**|Automático com ajustes|
-|**Mobile**|Swipe para trocar cores|
+|**Base colors**|12 curated pastel shades|
+|**Personal palette**|Up to 5 colors chosen by the user|
+|**Typography**|Caveat (handwritten) + Inter (clean)|
+|**Icons**|Native emojis|
+|**Animations**|Physical, fun, 200-500ms|
+|**Dark mode**|Automatic with adjustments|
+|**Mobile**|Swipe to change colors|
 
 ---
 
-> _"Seu quadro, suas cores, sua personalidade."_
+> _"Your board, your colors, your personality."_
 
-<!-- GIF FINAL: Montagem rápida mostrando todas as possibilidades de personalização -->
+<!-- FINAL GIF: Quick montage showing all customization possibilities -->
 
 ---
 
-**Atualizado:** Março 2026
+**Updated:** March 2026
 
 ---

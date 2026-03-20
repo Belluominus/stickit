@@ -1,139 +1,141 @@
-# 📋 STICKIT - Documentação do Projeto
+# 📋 STICKIT
 
-> _"Grude no que importa."_  
-> Versão 1.0 - MVP
+**[Português 🇧🇷|🇵🇹](README.pt.md)** | **[English 🇬🇧|🇺🇸](README.md)**
+
+> _"Stick to what matters."_  
+> Version 1.0 - MVP
 
 ![Version](https://img.shields.io/badge/version-1.0--MVP-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Stack](https://img.shields.io/badge/stack-Angular%20%7C%20NestJS-red)
 
-## 🎯 Sobre o Projeto
+## 🎯 About the Project
 
-**StickIt** é um assistente pessoal de produtividade que transforma a gestão de metas em uma experiência visual e intuitiva. Inspirado em post-its, o app permite que você organize seus hábitos de forma natural: arrastando, configurando e grudando metas no seu quadro pessoal.
+**StickIt** is a personal productivity assistant that transforms goal management into a visual and intuitive experience. Inspired by post-its, the app allows you to organize your habits naturally: dragging, configuring, and sticking goals onto your personal board.
 
-<!-- IMAGEM: Mockup da interface principal mostrando o quadro de post-its --><!-- GIF: Demonstração rápida do fluxo de arrastar post-it -->
+<!-- IMAGE: Mockup of the main interface showing the post-it board --><!-- GIF: Quick demonstration of the post-it drag-and-drop flow -->
 
 ---
 
-## 🖼️ Conceito Visual
+## 🖼️ Visual Concept
 
-O StickIt é construído sobre uma metáfora visual forte: **o quadro de post-its**.
+StickIt is built on a strong visual metaphor: **the post-it board**.
 
-### Os dois espaços fundamentais:
+### The two fundamental spaces:
 
-|Espaço|Função|Analogia|
+|Space|Function|Analogy|
 |---|---|---|
-|**Ilha de Ideias**|Post-its em branco para novos hábitos|"Ideias soltas que ainda não viraram compromisso"|
-|**Quadro Principal**|Metas configuradas e ativas|"Compromissos que já grudaram na sua rotina"|
+|**Idea Island**|Blank post-its for new habits|"Loose ideas that haven't yet become commitments"|
+|**Main Board**|Configured and active goals|"Commitments already stuck in your routine"|
 
-<!-- IMAGEM: Ilustração destacando os dois espaços --><!-- GIF: Transição entre ilha e quadro durante o uso -->
+<!-- IMAGE: Illustration highlighting the two spaces --><!-- GIF: Transition between island and board during use -->
 
-### Interações principais:
+### Main interactions:
 
-1. **Arrastar** → Pega um post-it da ilha e leva até o quadro
-2. **Configurar** → Ao soltar no quadro, abre o modal de configuração
-3. **Grudar** → Post-it configurado permanece no quadro com todas as informações
-4. **Concluir** → Click no post-it conclui a tarefa (com animação)
+1. **Drag** → Grab a post-it from the island and take it to the board
+2. **Configure** → When dropped on the board, opens the configuration modal
+3. **Stick** → Configured post-it remains on the board with all information
+4. **Complete** → Clicking on the post-it completes the task (with animation)
 
-<!-- GIF: Sequência completa: arrastar → configurar → grudar → concluir -->
-
----
-
-## ⚡ Funcionalidades - Versão 1.0 (MVP)
-
-Quadro interativo, 3 tipos de post-it (Pomodoro, Tempo Livre, Check-in), execução com check-in e feedbacks visuais.
-
-📖 **[Detalhamento completo →](docs/FEATURES.md)**
+<!-- GIF: Complete sequence: drag → configure → stick → complete -->
 
 ---
 
-## 📊 Coleta de Dados (Para Futuros Insights)
+## ⚡ Features - Version 1.0 (MVP)
 
-Coletamos horários, check-ins e posições dos post-its para gerar insights na versão 2.0.
+Interactive board, 3 types of post-it (Pomodoro, Free Time, Check-in), execution with check-in and visual feedback.
 
-📖 **[Detalhamento completo →](docs/FEATURES.md#-coleta-de-dados)**
+📖 **[Full details →](docs/FEATURES.md)**
 
 ---
 
-## 🛠️ Stack Tecnológica
+## 📊 Data Collection (For Future Insights)
 
-| Frontend | Backend | Banco |
+We collect times, check-ins, and post-it positions to generate insights in version 2.0.
+
+📖 **[Full details →](docs/FEATURES.md#-data-collection)**
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend | Backend | Database |
 |:---|:---|:---|
 | Angular 17+ | NestJS | PostgreSQL + Prisma |
 
-📖 **[Detalhamento completo →](docs/TECH_STACK.md)**
+📖 **[Full details →](docs/TECH_STACK.md)**
 
 ---
 
-## 📁 Estrutura de Pastas
+## 📁 Folder Structure
 
 ```text
 stickit/
 ├── frontend/                 # Angular app
 │   ├── src/
 │   │   ├── app/
-│   │   │   ├── core/        # Serviços globais, guards
-│   │   │   ├── shared/      # Componentes reutilizáveis
-│   │   │   │   ├── post-it/     # Componente base do post-it
-│   │   │   │   ├── quadro/      # Layout do quadro
-│   │   │   │   └── modal/       # Modal de configuração
-│   │   │   ├── features/    # Módulos funcionais
-│   │   │   │   ├── board/       # Quadro principal
-│   │   │   │   ├── execucao/    # Timers e check-in
-│   │   │   │   └── historico/   # Visualização
+│   │   │   ├── core/        # Global services, guards
+│   │   │   ├── shared/      # Reusable components
+│   │   │   │   ├── post-it/     # Base post-it component
+│   │   │   │   ├── board/       # Board layout
+│   │   │   │   └── modal/       # Configuration modal
+│   │   │   ├── features/    # Functional modules
+│   │   │   │   ├── board/       # Main board
+│   │   │   │   ├── execution/   # Timers and check-in
+│   │   │   │   └── history/     # Visualization
 │   │   │   └── app.config.ts
 │   │   └── assets/
-│   │       ├── images/       # Imagens do app
-│   │       └── gifs/         # Tutoriais animados
+│   │       ├── images/       # App images
+│   │       └── gifs/         # Animated tutorials
 │   └── package.json
 │
 ├── backend/                   # NestJS API
 │   ├── src/
 │   │   ├── modules/
-│   │   │   ├── metas/        # CRUD de metas
-│   │   │   ├── execucao/     # Registro de execuções
-│   │   │   ├── auth/         # Autenticação
-│   │   │   └── prisma/       # Serviço Prisma
+│   │   │   ├── goals/        # CRUD for goals
+│   │   │   ├── execution/    # Execution records
+│   │   │   ├── auth/         # Authentication
+│   │   │   └── prisma/       # Prisma service
 │   │   └── main.ts
 │   ├── prisma/
-│   │   └── schema.prisma     # Modelo do banco
+│   │   └── schema.prisma     # Database model
 │   └── package.json
 │
-├── docs/                      # Documentação
-│   ├── FUNCIONALIDADES.md    # Detalhamento das features
-│   ├── MODELO_DADOS.md       # Schema explicado
-│   ├── API.md                # Rotas e endpoints
-│   └── DECISOES.md           # Por que cada tecnologia
+├── docs/                      # Documentation
+│   ├── FEATURES.md           # Feature details
+│   ├── DATA_MODEL.md         # Explained schema
+│   ├── API.md                # Routes and endpoints
+│   └── DECISIONS.md          # Why each technology
 │
-└── README.md                  # Visão geral (este arquivo)
+└── README.md                  # Overview (this file)
 ```
 ---
-## 🗓️ Roadmap de Desenvolvimento
+## 🗓️ Development Roadmap
 
-**Fase atual:** Fundação (NestJS + Prisma + PostgreSQL)
+**Current phase:** Foundation (NestJS + Prisma + PostgreSQL)
 
-📖 **[Detalhamento completo →](docs/ROADMAP.md)**
-
----
-
-## 🎨 Design System (Resumo)
-
-Cores pastel personalizáveis, tipografia manuscrita + Inter, animações físicas.
-
-📖 **[Detalhamento completo →](docs/DESIGN_SYSTEM.md)**
+📖 **[Full details →](docs/ROADMAP.md)**
 
 ---
 
-## 🚀 Primeiros Passos
+## 🎨 Design System (Summary)
 
-### Pré-requisitos
+Customizable pastel colors, handwritten typography + Inter, physical animations.
+
+📖 **[Full details →](docs/DESIGN_SYSTEM.md)**
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
 
 - Node.js 18+
 - PostgreSQL 15+
 - Angular CLI: `npm install -g @angular/cli`
 - NestJS CLI: `npm install -g @nestjs/cli`
 
-### Instalação
+### Installation
 
 ```bash
 # Clone
@@ -143,7 +145,7 @@ cd stickit
 # Backend
 cd backend
 cp .env.example .env
-# Edite .env com suas credenciais
+# Edit .env with your credentials
 npm install
 npx prisma migrate dev --name init
 npm run start:dev
@@ -152,61 +154,61 @@ npm run start:dev
 cd ../frontend
 npm install
 ng serve
-# Acesse: http://localhost:4200
+# Access: http://localhost:4200
 ```
-### Variáveis de Ambiente
+### Environment Variables
 
 **.env (backend)**
 
 ```env
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/stickit"
-JWT_SECRET="sua-chave-super-secreta"
+DATABASE_URL="postgresql://user:password@localhost:5432/stickit"
+JWT_SECRET="your-super-secret-key"
 PORT=3000
 ```
 
 ---
-## 🧠 Por que StickIt é diferente?
+## 🧠 Why StickIt is Different
 
-|Aspecto|Outros Apps|StickIt|
+|Aspect|Other Apps|StickIt|
 |---|---|---|
-|**Interface**|Listas chatas|Quadro de post-its interativo|
-|**Interação**|Clicar em botões|Arrastar, grudar, organizar|
-|**Técnicas**|Só Pomodoro|3 tipos adaptáveis|
-|**Feedback**|Notificações|Visuais (post-it descolando)|
-|**Dados**|Só execução|Check-in + horários + posições|
-|**Personalidade**|Robótico|Divertido, memorável|
+|**Interface**|Boring lists|Interactive post-it board|
+|**Interaction**|Clicking buttons|Drag, stick, organize|
+|**Techniques**|Only Pomodoro|3 adaptable types|
+|**Feedback**|Notifications|Visual (post-it peeling off)|
+|**Data**|Only execution|Check-in + times + positions|
+|**Personality**|Robotic|Fun, memorable|
 
-<!-- GIF: Comparativo mostrando StickIt vs app tradicional -->
-
----
-## 💡 Observações Finais
-
-- **Foco na experiência:** A mágica do StickIt está na interação, não só nas funcionalidades
-- **Mobile primeiro:** Pensar em gestos desde o início
-- **Documentação viva:** Manter docs atualizados com prints e GIFs
-- **Divirta-se:** Se você não estiver se divertindo usando, o usuário também não vai
+<!-- GIF: Comparison showing StickIt vs traditional app -->
 
 ---
-## 📝 Documentação Complementar
+## 💡 Final Observations
 
-| Documento         | Descrição                  | Link                          |
+- **Focus on experience:** The magic of StickIt is in the interaction, not just the features
+- **Mobile first:** Think about gestures from the start
+- **Living documentation:** Keep docs updated with prints and GIFs
+- **Have fun:** If you're not having fun using it, neither will the user
+
+---
+## 📝 Complementary Documentation
+
+| Document         | Description                  | Link                          |
 | ----------------- | -------------------------- | ----------------------------- |
-| Funcionalidades   | Especificação completa     | [Ver](docs/FEATURES.md) |
-| Design System     | Schema Prisma explicado    | [Ver](docs/DESIGN_SYSTEM.md) |
-| Stack Tecnológica | Por que cada tecnologia    | [Ver](docs/TECH_STACK.md) |
-| Roadmap           | Roadmap de desenvolvimento | [Ver](docs/ROADMAP.md) |
-| API Endpoints     | Rotas e exemplos           | [Ver]() |
+| Features          | Complete specification     | [View](docs/FEATURES.md) |
+| Design System     | Explained Prisma schema    | [View](docs/DESIGN_SYSTEM.md) |
+| Tech Stack        | Why each technology        | [View](docs/TECH_STACK.md) |
+| Roadmap           | Development roadmap        | [View](docs/ROADMAP.md) |
+| API Endpoints     | Routes and examples        | [View]() |
 
 ---
 
-> _"Um post-it é só um papel. Uma pilha deles é um compromisso."_
+> _"A post-it is just a piece of paper. A stack of them is a commitment."_
 
-**Última atualização:** Março 2026
+**Last updated:** March 2026
 
 ---
 
 ## 📎 Links
 
-- [Repositório GitHub](https://github.com/Belluominus/stickit)
+- [GitHub Repository](https://github.com/Belluominus/stickit)
 
 ---
