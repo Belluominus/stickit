@@ -203,8 +203,6 @@ PORT=3000
 
 ## 📎 Links
 
-- [Repositório GitHub](https://github.com/seu-usuario/stickit)
-- [Quadro Trello](https://trello.com/seu-board)
-- [Protótipo Figma](https://figma.com/seu-projeto)
+- [Repositório GitHub](https://github.com/Belluominus/stickit)
 
 ---
