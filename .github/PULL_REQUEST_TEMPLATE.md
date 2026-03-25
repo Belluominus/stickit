@@ -1,20 +1,20 @@
-## 📋 Descrição
+## 📋 Description
 
-<!-- Descreva o que este PR faz -->
+<!-- Describe what this PR does. -->
 
-## 🔗 Issues Relacionadas
+## 🔗 Related Issues
 
 <!-- Closes #123, Fixes #456 -->
 
-## 📝 Tipo de mudança
+## 📝 Type of change
 
-- [ ] Nova feature
-- [ ] Correção de bug
-- [ ] Refatoração
-- [ ] Documentação
-- [ ] Configuração/Infra
+- [ ] New feature
+- [ ] Bug fix
+- [ ] Refactoring
+- [ ] Documentation
+- [ ] Configuration/Infra
 
-## 🧪 Como testar
+## 🧪 How to test
 
 <!-- Passos para testar esta mudança -->
 
