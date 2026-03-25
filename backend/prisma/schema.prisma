@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name          String    @db.VarChar(255)
+  email         String    @unique @db.VarChar(255)
+  password_hash String    @db.VarChar(255)
+  created_at    DateTime? @default(now()) @db.Timestamp(6)
+  last_login    DateTime? @db.Timestamp(6)
+  color_palette Json?     @default("[]") @db.Json
+  theme_mode    String?   @default("system") @db.VarChar(50)
+  goals         Goal[]
+  sessions      Session[]
+
+  @@map("users")
+}
+
+model Goal {
+  id               String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id          String    @db.Uuid
+  title            String    @db.VarChar(255)
+  category         String?   @db.VarChar(100)
+  execution_type   String    @db.VarChar(50)
+  execution_config Json      @db.Json
+  preferred_time   String?   @db.VarChar(10)
+  recurrence       Json?     @db.Json
+  is_active        Boolean?  @default(true)
+  board_position   Json?     @db.Json
+  created_at       DateTime? @default(now()) @db.Timestamp(6)
+  updated_at       DateTime? @default(now()) @updatedAt @db.Timestamp(6)
+  user             User      @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  sessions         Session[]
+
+  @@index([user_id], map: "idx_goals_user_id")
+  @@map("goals")
+}
+
+model Session {
+  id                String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  goal_id           String    @db.Uuid
+  user_id           String    @db.Uuid
+  started_at        DateTime  @db.Timestamp(6)
+  finished_at       DateTime? @db.Timestamp(6)
+  status            String    @db.VarChar(50)
+  checkin_completed Boolean?
+  checkin_note      String?
+  difficulty_level  Int?
+  execution_data    Json?     @db.Json
+  created_at        DateTime? @default(now()) @db.Timestamp(6)
+  goal              Goal      @relation(fields: [goal_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  user              User      @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@index([goal_id], map: "idx_sessions_goal_id")
+  @@index([started_at], map: "idx_sessions_started_at")
+  @@index([user_id], map: "idx_sessions_user_id")
+  @@map("sessions")
+}
